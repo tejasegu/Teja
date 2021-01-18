@@ -1,0 +1,305 @@
+Imported Atlanta Population into database.
+
+1.use db.zipcodes.find() to filter results to only the results where city is ATLANTA and state is GA.
+**************
+db.Zipcodes.find({city:"ATLANTA",state:"GA"})
+{ "_id" : "30303", "city" : "ATLANTA", "loc" : [ -84.388846, 33.752504 ], "pop" : 1845, "state" : "GA" }
+{ "_id" : "30305", "city" : "ATLANTA", "loc" : [ -84.385145, 33.831963 ], "pop" : 19122, "state" : "GA" }
+{ "_id" : "30306", "city" : "ATLANTA", "loc" : [ -84.351418, 33.786027 ], "pop" : 20081, "state" : "GA" }
+{ "_id" : "30307", "city" : "ATLANTA", "loc" : [ -84.335957, 33.769138 ], "pop" : 16330, "state" : "GA" }
+{ "_id" : "30308", "city" : "ATLANTA", "loc" : [ -84.375744, 33.771839 ], "pop" : 8549, "state" : "GA" }
+{ "_id" : "30309", "city" : "ATLANTA", "loc" : [ -84.388338, 33.798407 ], "pop" : 14766, "state" : "GA" }
+{ "_id" : "30310", "city" : "ATLANTA", "loc" : [ -84.423173, 33.727849 ], "pop" : 34017, "state" : "GA" }
+{ "_id" : "30311", "city" : "ATLANTA", "loc" : [ -84.470219, 33.722957 ], "pop" : 34880, "state" : "GA" }
+{ "_id" : "30312", "city" : "ATLANTA", "loc" : [ -84.378125, 33.746749 ], "pop" : 17683, "state" : "GA" }
+{ "_id" : "30313", "city" : "ATLANTA", "loc" : [ -84.39352, 33.76825 ], "pop" : 8038, "state" : "GA" }
+{ "_id" : "30314", "city" : "ATLANTA", "loc" : [ -84.425546, 33.756103 ], "pop" : 26649, "state" : "GA" }
+{ "_id" : "30315", "city" : "ATLANTA", "loc" : [ -84.380771, 33.705062 ], "pop" : 41061, "state" : "GA" }
+{ "_id" : "30316", "city" : "ATLANTA", "loc" : [ -84.333913, 33.721686 ], "pop" : 34668, "state" : "GA" }
+{ "_id" : "30317", "city" : "ATLANTA", "loc" : [ -84.31685, 33.749788 ], "pop" : 16395, "state" : "GA" }
+{ "_id" : "30318", "city" : "ATLANTA", "loc" : [ -84.445432, 33.786454 ], "pop" : 53894, "state" : "GA" }
+{ "_id" : "30319", "city" : "ATLANTA", "loc" : [ -84.335091, 33.868728 ], "pop" : 32138, "state" : "GA" }
+{ "_id" : "30324", "city" : "ATLANTA", "loc" : [ -84.354867, 33.820609 ], "pop" : 15044, "state" : "GA" }
+{ "_id" : "30326", "city" : "ATLANTA", "loc" : [ -84.358232, 33.848168 ], "pop" : 125, "state" : "GA" }
+{ "_id" : "30327", "city" : "ATLANTA", "loc" : [ -84.419966, 33.862723 ], "pop" : 18467, "state" : "GA" }
+{ "_id" : "30329", "city" : "ATLANTA", "loc" : [ -84.321402, 33.823555 ], "pop" : 17013, "state" : "GA" }
+{ "_id" : "30330", "city" : "ATLANTA", "loc" : [ -84.434735, 33.70645 ], "pop" : 643, "state" : "GA" }
+{ "_id" : "30331", "city" : "ATLANTA", "loc" : [ -84.520468, 33.72241 ], "pop" : 38185, "state" : "GA" }
+{ "_id" : "30334", "city" : "ATLANTA", "loc" : [ -84.388188, 33.74715 ], "pop" : 0, "state" : "GA" }
+{ "_id" : "30336", "city" : "ATLANTA", "loc" : [ -84.510028, 33.78534 ], "pop" : 1228, "state" : "GA" }
+{ "_id" : "30339", "city" : "ATLANTA", "loc" : [ -84.462879, 33.87125 ], "pop" : 11158, "state" : "GA" }
+{ "_id" : "30342", "city" : "ATLANTA", "loc" : [ -84.376091, 33.884245 ], "pop" : 19057, "state" : "GA" }
+{ "_id" : "30345", "city" : "ATLANTA", "loc" : [ -84.286961, 33.851347 ], "pop" : 19825, "state" : "GA" }
+{ "_id" : "30346", "city" : "ATLANTA", "loc" : [ -84.333354, 33.926717 ], "pop" : 18, "state" : "GA" }
+{ "_id" : "30349", "city" : "ATLANTA", "loc" : [ -84.481258, 33.605331 ], "pop" : 48116, "state" : "GA" }
+{ "_id" : "30350", "city" : "ATLANTA", "loc" : [ -84.341146, 33.979471 ], "pop" : 24573, "state" : "GA" }
+{ "_id" : "30360", "city" : "ATLANTA", "loc" : [ -84.271645, 33.937772 ], "pop" : 16023, "state" : "GA" }
+
+2. use db.zipcodes.aggregate with $match to do the same as above.
+**************************
+db.Zipcodes.aggregate([
+... {$match :{ city:"ATLANTA",state:"GA"}}
+... ])
+{ "_id" : "30303", "city" : "ATLANTA", "loc" : [ -84.388846, 33.752504 ], "pop" : 1845, "state" : "GA" }
+{ "_id" : "30305", "city" : "ATLANTA", "loc" : [ -84.385145, 33.831963 ], "pop" : 19122, "state" : "GA" }
+{ "_id" : "30306", "city" : "ATLANTA", "loc" : [ -84.351418, 33.786027 ], "pop" : 20081, "state" : "GA" }
+{ "_id" : "30307", "city" : "ATLANTA", "loc" : [ -84.335957, 33.769138 ], "pop" : 16330, "state" : "GA" }
+{ "_id" : "30308", "city" : "ATLANTA", "loc" : [ -84.375744, 33.771839 ], "pop" : 8549, "state" : "GA" }
+{ "_id" : "30309", "city" : "ATLANTA", "loc" : [ -84.388338, 33.798407 ], "pop" : 14766, "state" : "GA" }
+{ "_id" : "30310", "city" : "ATLANTA", "loc" : [ -84.423173, 33.727849 ], "pop" : 34017, "state" : "GA" }
+{ "_id" : "30311", "city" : "ATLANTA", "loc" : [ -84.470219, 33.722957 ], "pop" : 34880, "state" : "GA" }
+{ "_id" : "30312", "city" : "ATLANTA", "loc" : [ -84.378125, 33.746749 ], "pop" : 17683, "state" : "GA" }
+{ "_id" : "30313", "city" : "ATLANTA", "loc" : [ -84.39352, 33.76825 ], "pop" : 8038, "state" : "GA" }
+{ "_id" : "30314", "city" : "ATLANTA", "loc" : [ -84.425546, 33.756103 ], "pop" : 26649, "state" : "GA" }
+{ "_id" : "30315", "city" : "ATLANTA", "loc" : [ -84.380771, 33.705062 ], "pop" : 41061, "state" : "GA" }
+{ "_id" : "30316", "city" : "ATLANTA", "loc" : [ -84.333913, 33.721686 ], "pop" : 34668, "state" : "GA" }
+{ "_id" : "30317", "city" : "ATLANTA", "loc" : [ -84.31685, 33.749788 ], "pop" : 16395, "state" : "GA" }
+{ "_id" : "30318", "city" : "ATLANTA", "loc" : [ -84.445432, 33.786454 ], "pop" : 53894, "state" : "GA" }
+{ "_id" : "30319", "city" : "ATLANTA", "loc" : [ -84.335091, 33.868728 ], "pop" : 32138, "state" : "GA" }
+{ "_id" : "30324", "city" : "ATLANTA", "loc" : [ -84.354867, 33.820609 ], "pop" : 15044, "state" : "GA" }
+{ "_id" : "30326", "city" : "ATLANTA", "loc" : [ -84.358232, 33.848168 ], "pop" : 125, "state" : "GA" }
+{ "_id" : "30327", "city" : "ATLANTA", "loc" : [ -84.419966, 33.862723 ], "pop" : 18467, "state" : "GA" }
+{ "_id" : "30329", "city" : "ATLANTA", "loc" : [ -84.321402, 33.823555 ], "pop" : 17013, "state" : "GA" }
+{ "_id" : "30330", "city" : "ATLANTA", "loc" : [ -84.434735, 33.70645 ], "pop" : 643, "state" : "GA" }
+{ "_id" : "30331", "city" : "ATLANTA", "loc" : [ -84.520468, 33.72241 ], "pop" : 38185, "state" : "GA" }
+{ "_id" : "30334", "city" : "ATLANTA", "loc" : [ -84.388188, 33.74715 ], "pop" : 0, "state" : "GA" }
+{ "_id" : "30336", "city" : "ATLANTA", "loc" : [ -84.510028, 33.78534 ], "pop" : 1228, "state" : "GA" }
+{ "_id" : "30339", "city" : "ATLANTA", "loc" : [ -84.462879, 33.87125 ], "pop" : 11158, "state" : "GA" }
+{ "_id" : "30342", "city" : "ATLANTA", "loc" : [ -84.376091, 33.884245 ], "pop" : 19057, "state" : "GA" }
+{ "_id" : "30345", "city" : "ATLANTA", "loc" : [ -84.286961, 33.851347 ], "pop" : 19825, "state" : "GA" }
+{ "_id" : "30346", "city" : "ATLANTA", "loc" : [ -84.333354, 33.926717 ], "pop" : 18, "state" : "GA" }
+{ "_id" : "30349", "city" : "ATLANTA", "loc" : [ -84.481258, 33.605331 ], "pop" : 48116, "state" : "GA" }
+{ "_id" : "30350", "city" : "ATLANTA", "loc" : [ -84.341146, 33.979471 ], "pop" : 24573, "state" : "GA" }
+{ "_id" : "30360", "city" : "ATLANTA", "loc" : [ -84.271645, 33.937772 ], "pop" : 16023, "state" : "GA" }
+
+3. use $group to count the number of zip codes in Atlanta.
+
+db.Zipcodes.aggregate([
+... {$match:{city:"ATLANTA"}},
+... {$group:{_id:"$city",count:{$sum:1}}}
+... ])
+{ "_id" : "ATLANTA", "count" : 41 }
+
+4. use $group to find the total population in Atlanta.
+
+ db.Zipcodes.aggregate([
+... {$match:{city:"ATLANTA"}},
+... {$group:{_id:"$city",Totalpopulation:{$sum:"$pop"}}}
+... ])
+{ "_id" : "ATLANTA", "Totalpopulation" : 630046 }
+
+Populations By State
+
+1.use aggregate to calculate the total population for each state
+ db.Zipcodes.aggregate([
+... {$group:{_id:"$state", populationbystate:{$sum:"$pop"}}}
+... ])
+{ "_id" : "CT", "populationbystate" : 3287116 }
+{ "_id" : "WV", "populationbystate" : 1793146 }
+{ "_id" : "NY", "populationbystate" : 17990402 }
+{ "_id" : "NE", "populationbystate" : 1578139 }
+{ "_id" : "WA", "populationbystate" : 4866692 }
+{ "_id" : "RI", "populationbystate" : 1003218 }
+{ "_id" : "SC", "populationbystate" : 3486703 }
+{ "_id" : "OH", "populationbystate" : 10846517 }
+{ "_id" : "VA", "populationbystate" : 6181479 }
+{ "_id" : "PA", "populationbystate" : 11881643 }
+{ "_id" : "LA", "populationbystate" : 4217595 }
+{ "_id" : "NM", "populationbystate" : 1515069 }
+{ "_id" : "NC", "populationbystate" : 6628637 }
+{ "_id" : "OR", "populationbystate" : 2842321 }
+{ "_id" : "MA", "populationbystate" : 6016425 }
+{ "_id" : "TN", "populationbystate" : 4876457 }
+{ "_id" : "UT", "populationbystate" : 1722850 }
+{ "_id" : "DC", "populationbystate" : 606900 }
+{ "_id" : "KY", "populationbystate" : 3675484 }
+{ "_id" : "IL", "populationbystate" : 11427576 }
+{ "_id" : "MD", "populationbystate" : 4781379 }
+{ "_id" : "DE", "populationbystate" : 666168 }
+{ "_id" : "AL", "populationbystate" : 4040587 }
+{ "_id" : "WI", "populationbystate" : 4891769 }
+{ "_id" : "TX", "populationbystate" : 16984601 }
+{ "_id" : "IA", "populationbystate" : 2776420 }
+{ "_id" : "GA", "populationbystate" : 6478216 }
+{ "_id" : "ID", "populationbystate" : 1006749 }
+{ "_id" : "CO", "populationbystate" : 3293755 }
+{ "_id" : "MO", "populationbystate" : 5110648 }
+{ "_id" : "HI", "populationbystate" : 1108229 }
+{ "_id" : "MS", "populationbystate" : 2573216 }
+{ "_id" : "MT", "populationbystate" : 798948 }
+{ "_id" : "SD", "populationbystate" : 695397 }
+{ "_id" : "OK", "populationbystate" : 3145585 }
+{ "_id" : "MI", "populationbystate" : 9295297 }
+{ "_id" : "NV", "populationbystate" : 1201833 }
+{ "_id" : "IN", "populationbystate" : 5544136 }
+{ "_id" : "AZ", "populationbystate" : 3665228 }
+{ "_id" : "FL", "populationbystate" : 12686644 }
+
+2. sort the results by population, highest first
+ db.Zipcodes.aggregate([
+... {$group:{_id:"$state", populationbystate:{$sum:"$pop"}}},
+... {$sort:{populationbystate:-1}}
+... ])
+{ "_id" : "CA", "populationbystate" : 29754890 }
+{ "_id" : "NY", "populationbystate" : 17990402 }
+{ "_id" : "TX", "populationbystate" : 16984601 }
+{ "_id" : "FL", "populationbystate" : 12686644 }
+{ "_id" : "PA", "populationbystate" : 11881643 }
+{ "_id" : "IL", "populationbystate" : 11427576 }
+{ "_id" : "OH", "populationbystate" : 10846517 }
+{ "_id" : "MI", "populationbystate" : 9295297 }
+{ "_id" : "NJ", "populationbystate" : 7730188 }
+{ "_id" : "NC", "populationbystate" : 6628637 }
+{ "_id" : "GA", "populationbystate" : 6478216 }
+{ "_id" : "VA", "populationbystate" : 6181479 }
+{ "_id" : "MA", "populationbystate" : 6016425 }
+{ "_id" : "IN", "populationbystate" : 5544136 }
+{ "_id" : "MO", "populationbystate" : 5110648 }
+{ "_id" : "WI", "populationbystate" : 4891769 }
+{ "_id" : "TN", "populationbystate" : 4876457 }
+{ "_id" : "WA", "populationbystate" : 4866692 }
+{ "_id" : "MD", "populationbystate" : 4781379 }
+{ "_id" : "MN", "populationbystate" : 4372982 }
+Type "it" for more
+> it
+{ "_id" : "LA", "populationbystate" : 4217595 }
+{ "_id" : "AL", "populationbystate" : 4040587 }
+{ "_id" : "KY", "populationbystate" : 3675484 }
+{ "_id" : "AZ", "populationbystate" : 3665228 }
+{ "_id" : "SC", "populationbystate" : 3486703 }
+{ "_id" : "CO", "populationbystate" : 3293755 }
+{ "_id" : "CT", "populationbystate" : 3287116 }
+{ "_id" : "OK", "populationbystate" : 3145585 }
+{ "_id" : "OR", "populationbystate" : 2842321 }
+{ "_id" : "IA", "populationbystate" : 2776420 }
+{ "_id" : "MS", "populationbystate" : 2573216 }
+{ "_id" : "KS", "populationbystate" : 2475285 }
+{ "_id" : "AR", "populationbystate" : 2350725 }
+{ "_id" : "WV", "populationbystate" : 1793146 }
+{ "_id" : "UT", "populationbystate" : 1722850 }
+{ "_id" : "NE", "populationbystate" : 1578139 }
+{ "_id" : "NM", "populationbystate" : 1515069 }
+{ "_id" : "ME", "populationbystate" : 1226648 }
+{ "_id" : "NV", "populationbystate" : 1201833 }
+{ "_id" : "NH", "populationbystate" : 1109252 }
+Type "it" for more
+> it
+{ "_id" : "HI", "populationbystate" : 1108229 }
+{ "_id" : "ID", "populationbystate" : 1006749 }
+{ "_id" : "RI", "populationbystate" : 1003218 }
+{ "_id" : "MT", "populationbystate" : 798948 }
+{ "_id" : "SD", "populationbystate" : 695397 }
+{ "_id" : "DE", "populationbystate" : 666168 }
+{ "_id" : "ND", "populationbystate" : 638272 }
+{ "_id" : "DC", "populationbystate" : 606900 }
+{ "_id" : "VT", "populationbystate" : 562758 }
+{ "_id" : "AK", "populationbystate" : 544698 }
+{ "_id" : "WY", "populationbystate" : 453528 }
+
+3. limit the results to just the first 3 results. What are the top 3 states in population?
+
+ db.Zipcodes.aggregate([
+... ... {$group:{_id:"$state", populationbystate:{$sum:"$pop"}}},
+... ... {$sort:{populationbystate:-1}},
+...  {$limit:3}
+... ])
+{ "_id" : "CA", "populationbystate" : 29754890 }
+{ "_id" : "NY", "populationbystate" : 17990402 }
+{ "_id" : "TX", "populationbystate" : 16984601 }
+>
+
+Populations by City
+1. use aggregate to calculate the total population for each city (you have to use city/state combination). You can use a combination for the _id of the $group: { city: '$city', state: '$state' }
+
+shell):1:1
+>  db.Zipcodes.aggregate([
+... {$group:{_id:"$state",Totalpopulation:{$sum:"$pop"}}}
+... ])
+
+2.sort the results by population, highest first
+ db.Zipcodes.aggregate([
+... {$group:{_id:"$city",populationofcity:{$sum:"$pop"}}},
+... {$sort:{populationofcity:-1}}
+... ])
+{ "_id" : "CHICAGO", "populationofcity" : 2452177 }
+{ "_id" : "BROOKLYN", "populationofcity" : 2341387 }
+{ "_id" : "HOUSTON", "populationofcity" : 2123053 }
+{ "_id" : "LOS ANGELES", "populationofcity" : 2102295 }
+{ "_id" : "PHILADELPHIA", "populationofcity" : 1639862 }
+{ "_id" : "NEW YORK", "populationofcity" : 1476790 }
+{ "_id" : "BRONX", "populationofcity" : 1209548 }
+{ "_id" : "SAN DIEGO", "populationofcity" : 1054316 }
+{ "_id" : "DALLAS", "populationofcity" : 999042 }
+{ "_id" : "DETROIT", "populationofcity" : 967468 }
+{ "_id" : "PHOENIX", "populationofcity" : 902249 }
+{ "_id" : "MIAMI", "populationofcity" : 848436 }
+{ "_id" : "COLUMBUS", "populationofcity" : 825448 }
+{ "_id" : "SAN JOSE", "populationofcity" : 817497 }
+{ "_id" : "SAN ANTONIO", "populationofcity" : 813188 }
+{ "_id" : "WASHINGTON", "populationofcity" : 780954 }
+{ "_id" : "BALTIMORE", "populationofcity" : 738846 }
+{ "_id" : "JACKSONVILLE", "populationofcity" : 735505 }
+{ "_id" : "SAN FRANCISCO", "populationofcity" : 723993 }
+{ "_id" : "CLEVELAND", "populationofcity" : 687451 }
+
+3.limit the results to just the first 3 results. What are the top 3 cities in population?
+db.Zipcodes.aggregate([
+... ... {$group:{_id:"$city",populationofcity:{$sum:"$pop"}}},
+... ... {$sort:{populationofcity:-1}},
+... {$limit:3}
+... ])
+{ "_id" : "CHICAGO", "populationofcity" : 2452177 }
+{ "_id" : "BROOKLYN", "populationofcity" : 2341387 }
+{ "_id" : "HOUSTON", "populationofcity" : 2123053 }
+
+4.What are the top 3 cities in population in Texas?
+
+ db.Zipcodes.aggregate([
+... {$match:{state:"TX"}},
+... {$group:{_id:"$city",populationofcity:{$sum:"$pop"}}},
+...  {$sort:{populationofcity:-1}},
+... {$limit:3}
+... ])
+{ "_id" : "HOUSTON", "populationofcity" : 2095918 }
+{ "_id" : "DALLAS", "populationofcity" : 940191 }
+{ "_id" : "SAN ANTONIO", "populationofcity" : 811792 }
+
+Bonus
+
+1.Write a query to get the average city population for each state
+
+db.Zipcodes.aggregate([
+...  {$group:{_id:"$state",averagepopulation:{$avg:"$pop"}}}
+... ])
+{ "_id" : "NY", "averagepopulation" : 11279.248902821317 }
+{ "_id" : "WY", "averagepopulation" : 3239.4857142857145 }
+{ "_id" : "WV", "averagepopulation" : 2733.454268292683 }
+{ "_id" : "NE", "averagepopulation" : 2749.3710801393727 }
+{ "_id" : "RI", "averagepopulation" : 14539.391304347826 }
+{ "_id" : "VA", "averagepopulation" : 7575.341911764706 }
+{ "_id" : "LA", "averagepopulation" : 9089.644396551725 }
+{ "_id" : "NM", "averagepopulation" : 5489.380434782609 }
+{ "_id" : "PA", "averagepopulation" : 8149.275034293552 }
+{ "_id" : "SC", "averagepopulation" : 9962.00857142857 }
+{ "_id" : "OH", "averagepopulation" : 10771.119165839125 }
+{ "_id" : "WA", "averagepopulation" : 10055.148760330578 }
+{ "_id" : "NC", "averagepopulation" : 9402.321985815603 }
+{ "_id" : "OR", "averagepopulation" : 7401.877604166667 }
+{ "_id" : "UT", "averagepopulation" : 8404.146341463415 }
+{ "_id" : "MA", "averagepopulation" : 12692.879746835442 }
+{ "_id" : "TN", "averagepopulation" : 8378.792096219931 }
+{ "_id" : "DC", "averagepopulation" : 25287.5 }
+{ "_id" : "DE", "averagepopulation" : 12569.207547169812 }
+{ "_id" : "KY", "averagepopulation" : 4543.243510506799 }
+Type "it" for more
+
+2. What are the top 3 states in terms of average city population?
+
+ db.Zipcodes.aggregate([
+... ... ...  {$group:{_id:"$state",averagepopulation:{$avg:"$pop"}}},
+... ... {$sort:{averagepopulation:-1}},
+... {$limit:3}
+... ])
+{ "_id" : "DC", "averagepopulation" : 25287.5 }
+{ "_id" : "CA", "averagepopulation" : 19627.236147757256 }
+{ "_id" : "FL", "averagepopulation" : 15779.407960199005 }
