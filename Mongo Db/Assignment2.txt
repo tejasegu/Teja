@@ -213,7 +213,7 @@ Populations by City
 
 shell):1:1
 >  db.Zipcodes.aggregate([
-... {$group:{_id:"$state",Totalpopulation:{$sum:"$pop"}}}
+... {$group:{_id:"$city",Totalpopulation:{$sum:"$pop"}}}
 ... ])
 
 2.sort the results by population, highest first
