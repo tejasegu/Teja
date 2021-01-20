@@ -1,3 +1,4 @@
+TEJA
 Creating Data Base
 1.show dbs
 2.use mongo_practise
