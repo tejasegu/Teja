@@ -47,13 +47,13 @@ public class Assignment2Q7 {
 	Cookie cookie=new Cookie();
 	IceCream icecream=new IceCream();
     public static void main(String[] args) {
-    	System.out.println("welcome to the shop");
+    	System.out.println("Welcome to the shop");
     	Assignment2Q7 a=new Assignment2Q7();
     	a.selectRoles();
     	
     }
     private void selectRoles(){
-    	System.out.println("Please select your role \n 1.Owner\n 2.Customer");
+    	System.out.println("Please select your role by entering the number \n 1.Owner\n 2.Customer");
     	Scanner scan=new Scanner(System.in);
     	int a=scan.nextInt();
     	if(a==1)
@@ -67,9 +67,10 @@ public class Assignment2Q7 {
     		roles(role);
     	}
     	else {
-    		System.out.println("please enter a valid user");
+    		System.out.println("Please enter a valid user");
     		selectRoles();
     	}
+    	scan.close();
     	
     }
     private void roles(String role){
@@ -81,8 +82,8 @@ public class Assignment2Q7 {
     	}
     }
     private void addItems() {
-    	System.out.println("the avialble stock is\n1.Candies "+candies+"\n2.Cookies"+cookies+"\n3.IceCreams"+icecreams);
-    	System.out.println("Enter the item number to add and 4 to previpous menu and 5 to exit");
+    	System.out.println("The avialble stock is\n1.Candies "+candies+"\n2.Cookies"+cookies+"\n3.IceCreams"+icecreams);
+    	System.out.println("Enter the item number to add and 4 to previous menu and 5 to exit");
     	int d=scan.nextInt();
     		addItemsOperation(d);
     }
@@ -93,7 +94,7 @@ public class Assignment2Q7 {
     		int Candies=scan.nextInt();
     		candies=Candies;
     		Candy.addCandies(candies);
-    		System.out.println("added Candies");
+    		System.out.println("Added Candies");
     		addItems();
     		break;
     	case 2 :
@@ -101,7 +102,7 @@ public class Assignment2Q7 {
     		int Cookies=scan.nextInt();
     		cookies=Cookies;
     		Cookie.addCookies(cookies);
-    		System.out.println("added Cookies");
+    		System.out.println("Added Cookies");
     		addItems();
     		break;
     	case 3:
@@ -109,7 +110,7 @@ public class Assignment2Q7 {
     		int Icecream=scan.nextInt();
     		icecreams=Icecream;
     		IceCream.addIceCreams(icecreams);
-    		System.out.println("added icecreams");
+    		System.out.println("Added icecreams");
     		addItems();
     		break;
     	case 4:
@@ -126,19 +127,19 @@ public class Assignment2Q7 {
     private void placeOrder() {
     	if(candies!=0 || cookies!=0 || icecreams!=0 || candies+cookies+icecreams!=0) {
     		System.out.println("The cost of the avilable items and quantity are are\n1.Candies-Rupees60 Quantity-"+candies+"\n2.Cookies-Rupees70 Quantity-"+cookies+" \n3.IceCreams-Rupees65 Quantity-"+icecreams);
-    		System.out.println("please enter the item number to add the item and 4 to get the bill amount");
+    		System.out.println("Please enter the item number to add the item and 4 to get the bill amount");
     		int e=scan.nextInt();
     		placeOrderOperation(e);
     	}
     	else
     	{
-    		System.out.println("please ask the owner to add the items to list");
+    		System.out.println("Please ask the owner to add the items to list");
     	}
     }
     private void placeOrderOperation(int choice) {
     	switch(choice) {
     	case 1:
-    		System.out.println("enter the number of items");
+    		System.out.println("Enter the number of items");
     		int cand=scan.nextInt();
     		if(cand<candies) {
     			candies=candies-cand;
@@ -146,12 +147,12 @@ public class Assignment2Q7 {
     		placeOrder();		
     		}
     		else {
-    			System.out.println("please enter the valid amount");
+    			System.out.println("Please enter the valid amount");
     			placeOrder();	
     		}
     	
     	case 2:
-    		System.out.println("enter the number of items");
+    		System.out.println("Enter the number of items");
     		int cook=scan.nextInt();
     		if(cook<cookies) {
     			cookies=cookies-cook;
@@ -159,11 +160,11 @@ public class Assignment2Q7 {
     		placeOrder();		
     		}
     		else {
-    			System.out.println("please enter the valid amount");
+    			System.out.println("Please enter the valid amount");
     			placeOrder();	
     		}
     	case 3:
-    		System.out.println("enter the number of items");
+    		System.out.println("Enter the number of items");
     		int ice=scan.nextInt();
     		if(ice<icecreams) {
     			icecreams=icecreams-ice;
@@ -171,12 +172,12 @@ public class Assignment2Q7 {
     		placeOrder();		
     		}
     		else {
-    			System.out.println("please enter the valid amount");
+    			System.out.println("Please enter the valid amount");
     			placeOrder();	
     		}
     	case 4:
     	    System.out.println("Total bill amount including taxes is= Rupees"+total);
-    	    System.out.println("thank you for shopping");
+    	    System.out.println("Thank you for shopping");
     		System.exit(0);   
     	}	
     	scan.close();
