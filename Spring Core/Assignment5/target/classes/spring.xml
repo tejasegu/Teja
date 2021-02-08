@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+  
+    <context:annotation-config />
+    <bean id="question" class="SpringAssignments.Assignment2.Question">
+    <property name="Questionid" value="1"></property>
+    <property name="quesname" value="Name any two fruits"></property>
+     <!--  property name="answers" ref="ans"></property>-->
+    </bean>
+    <bean id="answers" class="SpringAssignments.Assignment2.ans">
+    <property name="qans1" value="Mango"/>
+     <property name="qans2" value="Orange"/>
+    </bean>
+    <bean id="auth" class="SpringAssignments.Assignment2.author">
+    <property name="name" value="Uday"></property>
+    <property name="noofques" value="2"></property>
+    </bean>
+    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+ </beans>
+    

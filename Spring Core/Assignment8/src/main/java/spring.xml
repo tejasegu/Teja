@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+    
+    <bean id="customer" class="SpringAssignments.firstassignment.Customer"  >
+    <property name="customerid" value="001"/>
+     <property name="customername" value="Teja"/>
+      <property name="custnum" value="8247280062"/>
+      <property name="add" ref="Address"/>
+    </bean>
+    <bean id="Address" class="SpringAssignments.firstassignment.Address" init-method="init" destroy-method="destroy">
+    <property name="street" value="ABC"/>
+    <property name="city" value="Palakollu"/>
+    <property name="state" value="AP"/>
+    <property name="zip" value="534260"/>
+    <property name="country" value="India"/>
+     </bean>
+      <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean>
+</beans>
