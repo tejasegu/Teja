@@ -5,10 +5,10 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-class Trader {
+class Traders {
     private String name;
     private String city;
-	public Trader(String name, String city) {
+	public Traders(String name, String city) {
 		super();
 		this.name = name;
 		this.city = city;
@@ -27,25 +27,25 @@ class Trader {
 	}
 	@Override
 	public String toString() {
-		return "Trader [name=" + name + ", city=" + city + "]";
+		return "Traders [name=" + name + ", city=" + city + "]";
 	}
     
 }
 
 class Transaction {
-    private Trader trader;
+    private Traders trader;
     private int year;
     private int value;
-	public Transaction(Trader trader, int year, int value) {
+	public Transaction(Traders trader, int year, int value) {
 		super();
 		this.trader = trader;
 		this.year = year;
 		this.value = value;
 	}
-	public Trader getTrader() {
+	public Traders getTrader() {
 		return trader;
 	}
-	public void setTrader(Trader trader) {
+	public void setTrader(Traders trader) {
 		this.trader = trader;
 	}
 	public int getYear() {
@@ -89,11 +89,11 @@ public class Assignment5Q4 {
     }
 
     public static void main(String[] args) {
-    	Trader t1=new Trader("Teja", "Delhi");
-    	Trader t2=new Trader("Uday", "Delhi");
-    	Trader t3=new Trader("Venkat", "Pune");
-    	Trader t4=new Trader("Siva", "Bza");
-    	Trader t5=new Trader("Kiran", "Pune");
+    	Traders t1=new Traders("Teja", "Delhi");
+    	Traders t2=new Traders("Uday", "Delhi");
+    	Traders t3=new Traders("Venkat", "Pune");
+    	Traders t4=new Traders("Siva", "Bza");
+    	Traders t5=new Traders("Kiran", "Pune");
     	Transaction tt1=new Transaction(t1,2011,50000);
     	Transaction tt2=new Transaction(t1,2015,11000);
     	Transaction tt3=new Transaction(t3,2011,60000);
