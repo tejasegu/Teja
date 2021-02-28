@@ -18,7 +18,7 @@ public class Customer {
 	@NotNull
 	@Pattern(regexp="\"^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$\"")
 	public String email;
-	
+	@Contact
 	public double contact;
 	@NotBlank(message="City must be selected")
 	public String city;
