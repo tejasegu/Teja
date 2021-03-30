@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333;
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  img {
+    display: block;
+    width: 50%;
+    height: 10%;
+    margin-left: 25%;
+    margin-top: 2%;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    padding: 1em 0;
+  }
+
+  p {
+    margin: 0;
+    padding: 1em 0;
+  }
+
+  .btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 2em;
+    border: 1px solid #666;
+    margin: 0.5em 0;
+  }
+
+  .btn:hover {
+    background: #eaeaea;
+    color: #333;
+  }
+
+  /* Header Showcase */
+
+  #showcase {
+    min-height: 450px;
+    color: #fff;
+    text-align: center;
+  }
+
+  #showcase .bg-image {
+    position: absolute;
+    background-image: url("../ass/images/w4.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    z-index: -1;
+    opacity: 0.4;
+  }
+
+  #showcase h1 {
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+
+  #showcase .content-wrap,
+  #section-a .content-wrap {
+    padding: 0 1.5em;
+  }
+
+  /* Section A */
+
+  #section-a {
+    background: #eaeaea;
+    color: #333;
+    padding-bottom: 2em;
+  }
+
+  /* Section B */
+
+  #section-b {
+    padding: 2em 1em 1em;
+  }
+
+  #section-b ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #section-b li {
+    margin-bottom: 1em;
+    background: #fff;
+    color: #333;
+  }
+
+  .card-content {
+    padding: 1.5em;
+  }
+
+  /* Section C */
+
+  #section-c {
+    background: #fff;
+    color: #333;
+    padding: 2em;
+  }
+
+  /* Section D / Boxes */
+
+  #section-d .box {
+    padding: 2em;
+    color: #fff;
+  }
+
+  #section-d .box:first-child {
+    background: #f33404;
+  }
+
+  /* Footer */
+
+  #main-footer {
+    padding: 2em;
+    background: #000;
+    color: #fff;
+    text-align: center;
+  }
+
+  #main-footer a {
+    color: #2690d4;
+    text-decoration: none;
+  }
+
+  /* Media Queries */
+
+  @media (min-width: 700px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+
+    #section-a .content-text {
+      //columns: 2;
+      column-gap: 2em;
+    }
+
+    #section-a .content-text p {
+      padding-top: 0;
+    }
+
+    .content-wrap,
+    #section-b ul {
+      grid-column: 2/4;
+    }
+
+    .box,
+    #main-footer div {
+      grid-column: span 2;
+    }
+
+    #section-b ul {
+      display: flex;
+      justify-content: space-around;
+      box-shadow:#f33404;
+    }
+
+    #section-b li {
+      width: 31%;
+    }
+  }
+    </style>
+</head>
+<body>
+    <header id="showcase" class="grid">
+        <div class="bg-image"></div>
+        <div class="content-wrap"><h1> Mobile Wash </h1>
+            <p>Every moment is valuable go and Catch it! We care for your car wash </p>
+            <a href="#section-b" class="btn">Read More</a>
+        </div>
+
+    </header>
+    <main id="main">
+        <section id="section-a" class="grid">
+            <div class="content-wrap">
+                <h2 class="content-title">On Demand Mobile Car Wash</h2>
+                <div class="content-text"> 
+                    <p>
+                        We provide the on demand car wash system while you work in your office let your car wash. Every momemt is valuable and busy in our lifes.
+                        Why to spend hours of time on washing your car and being in que for washing. We are here for you to wash your car where ever you are with the best ever washers in the town just a tap in your mobile.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="section-b" class="grid">
+            <ul>
+                <li>
+                    <div class="card">
+                        <img src="../ass/images/w.svg" alt="">
+                        <div class="card-content">
+                            <h3 class="card-title">Select your wash
+                                package</h3>
+                                <p>Choose the package that aligns with your car wash needs. All packages can be customized</p>
+
+                        </div>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <img src="../ass/images/w2.svg" alt="">
+                        <div class="card-content">
+                            <h3 class="card-title">Select your
+                                wash day
+
+                            </h3>
+                            <p>We wash 8am-5pm at your office, apartment, or home. Easily reschedule anytime.</p>
+                        </div>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <img src="../ass/images/w3.svg" alt="">
+                        <div class="card-content">
+                            <h3 class="card-title">Leave your car ready
+                                for our technicians
+
+                            </h3>
+                            <p>Park where you normally do. Your car gets washed right there. For interior access, leave it unlocked or request to be contacted.</p>
+                        </div>
+
+                    </div>
+                </li>
+                
+            </ul>
+
+        </section>
+
+          <section id="section-c" class="grid">
+            <div class="content-wrap">
+                <h2 class="content-title">The mobile car wash that comes to you</h2>
+                <p>Anywhere. At your office, apartment, or home.
+                    Easily schedule and manage your bookings online or from our mobile app.</p>
+            </div>
+        </section>
+        <section id="section-d" class="grid">
+            <div class="box">
+                <h2 class="content-title">Contact Us</h2>
+                <p> We wash, palakollu,Andhra Pradesh, India</p>
+                <p>contact@wewash.com</p>
+            </div>
+            <div class="box">
+                <h2 class="content-title">About Our Company</h2>
+                <p>NuWash is a mobile car care service based in Austin, Texas. Our mission is to make taking care of your car easier than ever. Currently, we provide convenient car washing services by sending a professional technician to come to you and wash your car right where its parked at your office, apartment, or home. Originally started by a small team of friends at The University of Texas in 2016, NuWash now serves thousands of happy customers across Austin and Dallas, Texas.</p>
+            </div>
+        </section>
+        <footer id="main-footer" class="grid">
+            <div>WE Wash</div>
+            <div>Facebook <a href="" target="_blank">We Wash Services</a></div>
+        </footer>
+
+    </main>
+</body>
+</html>

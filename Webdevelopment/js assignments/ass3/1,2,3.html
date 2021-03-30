@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        //Q1
+        class Rectangle{
+    width;
+    height;
+    constructor(width,height){
+        this.width = width;
+        this.height = height;
+    }
+    
+}
+let rectangle = new Rectangle(4,5);
+console.log(rectangle.width);
+console.log(rectangle.height);
+rectangle.height = 60;
+
+console.log(rectangle.width);
+console.log(rectangle.height)
+
+//Q2
+rectangle.getArea = function(){
+    return this.height * this.width;
+}
+console.log(rectangle.getArea())
+//Q3
+
+let  r= new Rectangle(4,5);
+r.height = 50;
+r.getArea = function(){
+    return this.height * this.width;
+}
+ console.log(r.getArea());
+
+    </Script>
+</body>
+</html>

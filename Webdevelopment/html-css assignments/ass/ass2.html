@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        background-color:lightblue;
+        font-family: 'Anaheim'
+    }
+    div.header{
+        display: block;
+        background-color: blue;
+        border-radius: 10px;
+        width: 100%;
+        text-align: center;
+        line-height: 400%;
+        margin-bottom: 0px;
+        margin-top: 0%;
+    }
+    h1{
+        color: white;
+    }
+    div.form{
+        display: block;
+        background-color: lightskyblue;
+        border-radius: 10px;
+        width: 50%;
+        margin: auto;
+        line-height: 200%;
+        margin-top: 0px;
+        margin-top: 0%;
+    }
+    div.submit{
+        display: block;
+        background-color: blue;
+        border-radius: 10px;
+        width: 100%;
+        text-align:center;
+        line-height: 300%;
+        margin-top: 5px;
+    }
+    .label{
+        
+        background-color: wheat;
+        border-radius: 5px;
+        line-height: 100%;
+        margin-right: 0px;
+        margin-left: 10px;
+        text-align: center;
+        width: 100px;
+        height: 25px;
+        border: solid lightseagreen;
+        padding: 1px;
+    }
+    #name ,#dateofbith,#gender,#site,#ctc,#doj,#number,#mail,#des,#resume,#submit {
+        border-radius: 5px;
+       border-style: none;
+    }
+    #submit{
+        background-color: wheat;
+        width: 100px;
+        height: 25px;
+        text-align: center;
+        color: black;
+    }
+    #submit:hover{
+        background-color: red;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>Application Form For The Post Of web Developer</h1>
+    </div>
+    
+    <form action="" class="form1">
+        <div class="form">
+        
+            <label for="name" class="label" >Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+            <input type="text" id="name" name="last name" placeholder="Enter your second name"><br>
+            <label for="dob" class="label">Date Of Birth:</label>
+            <input type="date" id="dob" name="dob" placeholder="Enter the date of birth" required><br>
+            <label for="gender" class="label">Gender:</label>
+            <select name="gender" id="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="others">Others</option>
+            </select><br>
+            <label for="technology" class="label">Technology you are familiar with:</label>
+            <label for="java">Java
+            <input type="checkbox" name="java" value="java" > 
+            <span class="checkmark"></span>
+              </label>
+              <label for=".net">.Net
+                <input type="checkbox" name=".net" value=".net"> 
+                <span class="checkmark"></span>
+                  </label>
+                  <label for="html">html</label>
+                    <input type="checkbox" name="html" value="html"> 
+                    <span class="checkmark"></span><br>
+            <label for="site" class="label">Personal websites </label>
+            <input type="url" name="site" id="site" placeholder="Please enter if any"><br>
+            <label for="working" class="label"> Are You Working Currently</label>
+          
+            <input type="radio" name="yes" class="yes">
+            <label for="yes">Yes</label>
+      
+            <input type="radio" name="yes" class="no">
+            <label for="no">No</label><br>
+
+            <label for="ctc" class="label">Current CTC</label>
+            <input type="text" name="ctc" id="ctc"><br>
+            <label for="doj" class="label">Available Date Of Joining</label>
+            <input type="date" name="doj" id="doj"><br>
+            <label for="number" class="label">Mobile Number</label>
+            <input type="number" name="number" id="number"><br>
+            <label for="mail" class="label">Mail</label>
+            <input type="email" name="mail" id="mail"><br>
+            <label for="des" class="label">Short Description About You</label>
+            <textarea name="des" id="des"  cols="50" rows="5"  required></textarea><br>
+            <label for="resume" class="label">Upload Your Resume</label>
+            <input type="file" name="resume" id="resume" required> 
+        </div>
+            <div class="submit">
+                <input type="submit" name="submit" value="Submit" id="submit">
+            </div>  
+      
+        </form>
+   
+    
+    
+</body>
+</html>

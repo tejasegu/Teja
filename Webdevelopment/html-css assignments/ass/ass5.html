@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:lightslategray;
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+  }
+  img {
+    display: block;
+    width: 50%;
+    height: 10%;
+    margin-left: 25%;
+    margin-top: 2%;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    padding: 1em 0;
+  }
+
+  p {
+    margin: 0;
+    padding: 1em 0;
+  }
+  .btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 2em;
+    border: 1px solid #666;
+    margin: 0.5em 0;
+  }
+
+  .btn:hover {
+    background: #eaeaea;
+    color: #333;
+  }
+
+  #showcase {
+    min-height: 450px;
+    color: #fff;
+    text-align: center;
+  }
+
+  #showcase .bg-image {
+    position: absolute;
+    background-image: url("../ass/images/a5-b.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    width: 100%;
+    height: 450px;
+    z-index: -1;
+    opacity: 0.8;
+  }
+
+        #menu-list {
+  display: grid;
+  grid-gap: 10px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  line-height: 50%;
+  margin-top: 0.5%;
+        }
+  #menu-list a {
+  background-color: rosybrown;
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  color:white;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+nav{
+    background-color: thistle;
+    width: 100%;
+    position: fixed;
+    height: 15px;
+    line-height: 100%;
+}
+#showcase h1 {
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+  #section-a {
+    background: #eaeaea;
+    color: #333;
+    padding-bottom: 2em;
+  }
+
+  /* Section B */
+
+  #section-b {
+    padding: 2em 1em 1em;
+  }
+
+  #section-b ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #section-b li {
+    margin-bottom: 1em;
+    background:lightsteelblue;
+    border: solid ;
+    color: #333;
+    grid-template-columns: inherit;
+    box-shadow: lavender;
+  }
+
+  .card-content {
+    padding: 1.5em;
+  }
+
+  /* Section C */
+
+  #section-c {
+    background:lavenderblush;
+    color: #333;
+    padding: 2em;
+  }
+  #section-c img{
+      width: 100%;
+      margin-left: 0px;
+  }
+
+  #main-footer {
+   
+    background: #000;
+    color: #fff;
+    text-align: center;
+    height: 40px;
+    line-height: 200%;
+  }
+
+  #main-footer a {
+    color: #2690d4;
+    text-decoration: none;
+  }
+
+
+  @media (min-width: 700px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+    #section-a .content-text {
+      columns: 2;
+      column-gap: 2em;
+    }
+
+    #section-a .content-text p {
+      padding-top: 0;
+    }
+
+
+
+    #section-b ul {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #section-b li {
+      width: 31%;
+    }
+  }
+}
+    </style>
+</head>
+<body>
+    <nav id="section-a">
+        <ul id="menu-list">
+            <li>
+                <a href="#section-b">Menu</a>
+            </li>
+            <li>
+                <a href="#section-c">Contact Us</a>
+            </li>
+            <li>
+                <a href="">Quality</a>
+            </li>
+        </ul>
+    </nav>
+    <header id="showcase" class="grid">
+        <div class="bg-image"></div>
+        <div class="content-wrap"><h1> Tinepoo</h1>
+            <p>Best Andhra Foods With Hygiene Conditions </p>
+            <a href="#section-b" class="btn">Menu</a>
+        </div>
+    </header>
+    <main>
+       
+       <section id="section-b">
+        <ul>
+            <li>
+                <div class="card">
+                    <img src="../ass/images/a5.jpeg" alt="">
+                    <div class="card-content">
+                        <h3 class="card-title"> Tasty Idli</h3>
+                            <p> 50 Rupees</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <img src="../ass/images/a5-1.jpg" alt="">
+                    <div class="card-content">
+                        <h3 class="card-title">Yummy Dosa
+                        </h3>
+                        <p>50 Rupees</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <img src="../ass/images/a5-3.jpg" alt="">
+                    <div class="card-content">
+                        <h3 class="card-title"> Best of Mysoore Bondas
+                        </h3>
+                        <p>40 Rupees</p>
+                    </div>
+
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <img src="../ass/images/a5-4.jpg" alt="">
+                    <div class="card-content">
+                        <h3 class="card-title">  Vada
+                        </h3>
+                        <p>40 Rupees</p>
+                    </div>
+
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <img src="../ass/images/a5-5.jpg" alt="">
+                    <div class="card-content">
+                        <h3 class="card-title"> Pesarattu
+                        </h3>
+                        <p>50 Rupees</p>
+                    </div>
+
+                </div>
+            </li>
+            
+        </ul>
+
+
+       </section>
+       <section id="section-c">
+           <div class="img">
+               <img src="../ass/images/a5-2.jpg" alt="">
+
+           </div>
+
+       </section>
+
+    </main>
+    <footer id="main-footer" class="grid">
+        <div> Contact Us at </div>
+        <div><a href="">Facebook</a></div>
+        <div><a href="">Email</a></div>
+        <div><a href="">Call</a></div>
+    </footer>
+</body>
+</html>

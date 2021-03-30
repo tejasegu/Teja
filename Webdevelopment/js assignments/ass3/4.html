@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj={
+            firstname:"Teja",
+            lastname:"segu"
+        }
+        console.log(obj.firstname)
+        console.log(obj.lastname)
+        obj.lastname="nagesh";
+        console.log(obj.lastname)
+        //Q5
+        console.log(obj.middlename)
+        obj.middlename="venkata";
+        console.log(obj.middlename)
+        //Q6
+        var str=({"firstname":"Teja", "lastname":"segu"});
+        var rel=eval(str);
+        console.log(rel)
+        console.log(rel.firstname)
+        console.log(typeof(str))
+        //Q7
+
+        var real=JSON.parse('{"firstname":"Teja", "lastname":"segu"}');
+        console.log(real)
+        console.log(typeof(real))
+    </script>
+</body>
+</html>

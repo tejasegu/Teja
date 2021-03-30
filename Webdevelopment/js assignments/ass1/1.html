@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function parity(n){
+            if(n%2==0){
+                console.log("even");
+            }
+            else {
+                console.log("odd");
+            }
+        }
+        parity(2);
+        parity(1);
+        function max(a,b,c){
+            if(a >= b && a>= c){
+                return console.log(a);
+            }
+            if(b>=a && b>=c){
+                return console.log(b);
+            }
+            if(c>=a && c>=b){
+                return console.log(c);
+            }
+        }
+        max(1,2,3);
+        max(2,1,3);
+        max(3,2,1);
+
+      
+function flip(n) {  
+        var heads = 0;
+        var  tails = 0;
+        for(var i=0;i<n;i++){
+            x=Math.random;
+
+            (Math.floor(Math.random() * 2) == 0) ? heads++:tails++;
+        }
+        return console.log(heads);
+    
+}
+flip(100);
+flip(10000);
+function flip2(n) {  
+        var heads = 0;
+        var  tails = 0;
+        for(var i=0;i<n;i++){
+
+            (Math.floor(Math.random() * 2) == 0) ? heads++:tails++;
+        }
+       console.log(heads/n);
+    
+}
+flip2(100);
+flip2(10000);
+function padchars(a,b){
+    console.log(b.repeat(a));
+}
+padchars(6,"x");
+var r_text = new Array ();
+        r_text[0] = "Have a GOOD day!";
+        r_text[1] = "Have a BAD day!";
+        var i = Math.floor(r_text.length * Math.random());
+        document.write(r_text[i]);
+
+        var arr= [];
+        while(arr.length<4){
+        var x=Math.floor(Math.random()*100);
+            arr.push(x);
+        }
+        console.log(arr);
+        var arr1= [];
+        while(arr1.length<100){
+        var x=Math.random();
+            arr1.push(x);
+        }
+        console.log(arr1);
+        var strings = ["1.2", "2.3", "3.4"];
+        function numberArray(arr){
+            for( var i=0; i<arr.length; i++){
+            arr[i]=parseFloat(arr[i]);
+        }
+        return arr;
+    }
+        var nums=numberArray(strings);
+        console.log(nums);
+        
+    </script>
+</body>
+</html>
