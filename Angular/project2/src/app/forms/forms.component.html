@@ -1,0 +1,36 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 mx-auto">
+      <div class="md-form">
+        <input
+          type="text"
+          [(ngModel)]="searchText"
+          class="advancedSearchTextbox"
+          id="search"
+          placeholder="Search here"
+        />
+      </div>
+    </div>
+  </div>
+
+<table   border="1">
+  <thead>
+    <tr>
+      <th *ngFor="let head of headElements; let i = index" scope="col">{{head}} </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let el of elements | LockFilter:searchText; let i=index " >
+      <th scope="row">{{el.title}}</th>
+      <td>{{el.name}}</td>
+      <td>{{el.category}}</td>
+      <td>{{el.des}}</td>
+      <td><button >Edit</button></td>
+      <td><button>Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
